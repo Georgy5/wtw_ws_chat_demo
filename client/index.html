@@ -42,9 +42,9 @@
           message = JSON.parse(incommingMessage.data);
           messageBody = `${message.nick}: ${message.message}`;
         } else {
-          messageBody = `<p>${incommingMessage.data}</p>`;
+          messageBody = `${incommingMessage.data}`;
         }
-        newMessage.innerHTML = messageBody;
+        newMessage.innerText = messageBody;
         messagesDisplay.appendChild(newMessage);
       });
       if (!nickname) {
